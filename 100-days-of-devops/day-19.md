@@ -121,7 +121,7 @@ scp -r /home/thor/news /home/thor/apps steve@stapp02:/tmp/
 The transfer completed successfully:
 
 ~~~text
-index.html  100%  117  ... 
+index.html  100%  117  ...
 index.html  100%  117  ...
 ~~~
 
@@ -247,4 +247,3 @@ The second request returned the apps page:
 - [Apache HTTP Server: mod_dir Directory Indexing](https://httpd.apache.org/docs/2.4/mod/mod_dir.html)
 - [Apache HTTP Server: Starting Apache](https://httpd.apache.org/docs/2.4/invoking.html)
 - [curl Documentation](https://curl.se/docs/)
-
