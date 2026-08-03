@@ -206,4 +206,3 @@ The final state was:
 - [MariaDB GRANT](https://mariadb.com/docs/server/reference/sql-statements/account-management-sql-statements/grant)
 - [MariaDB CREATE DATABASE](https://mariadb.com/docs/server/reference/sql-statements/data-definition/create)
 - [MariaDB SHOW GRANTS](https://mariadb.com/docs/server/reference/sql-statements/administrative-sql-statements/show/show-grants)
-
