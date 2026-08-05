@@ -74,7 +74,7 @@ Success — the policy exists with the required name:
 
 ## Best Practices
 
-- **A policy grants nothing until attached.** Creating `iampolicy_anita` is only step one; use `attach-user-policy` or `attach-group-policy` (e.g. onto [`iamgroup_james`](day-17.md)) to actually apply it.
+- **A policy grants nothing until attached.** Creating `iampolicy_anita` is only step one; use `attach-user-policy` or `attach-group-policy` (e.g. onto [`iamgroup_james`](day-17-create-iam-group.md)) to actually apply it.
 - **Scope `Describe*` narrowly when possible.** Here we granted only the three actions requested instead of the broader AWS-managed read-only policy, following least privilege.
 - **`Resource: "*"` is correct, not a red flag, for these actions.** EC2 `Describe*` API calls are inherently account-wide and don't support ARN-based resource restriction, unlike `ec2:TerminateInstances` which can be scoped to specific instance ARNs.
 - **Version your policy documents.** IAM keeps up to 5 policy versions; use `create-policy-version` for future edits rather than deleting and recreating the policy.

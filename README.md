@@ -36,7 +36,7 @@ Each completed challenge follows the same learning-oriented format:
 4. Verification and expected results.
 5. Best practices and official documentation.
 
-Files use `day-NN.md` for day-based programs and `task-NN.md` for numbered task tracks.
+Files use `day-NN-<challenge-title>.md` for day-based programs and `task-NN-<challenge-title>.md` for numbered task tracks. The title portion is a lowercase hyphen-separated slug derived from the guide's H1 title.
 
 ## How to Use This Repository
 

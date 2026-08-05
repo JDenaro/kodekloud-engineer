@@ -61,7 +61,7 @@ Success — the policy shows up in the user's attached list:
 
 ## Best Practices
 
-- **Prefer attaching policies to groups over individual users.** Direct user attachments (as required here) work fine for one-off cases, but as the user base grows, managing permissions through group membership (like [`iamgroup_james`](day-17.md)) is easier to audit and keep consistent.
+- **Prefer attaching policies to groups over individual users.** Direct user attachments (as required here) work fine for one-off cases, but as the user base grows, managing permissions through group membership (like [`iamgroup_james`](day-17-create-iam-group.md)) is easier to audit and keep consistent.
 - **A user can have both direct and group-inherited policies.** Effective permissions are the union of both — worth checking `list-attached-user-policies` *and* group memberships when auditing what a user can actually do.
 - **Detach, don't delete, when revoking access.** Use `detach-user-policy` to remove access without destroying the reusable policy itself.
 - **Use the ARN, never the name, for attach/detach calls.** Policy names aren't unique across scopes (`Local` vs `AWS` managed), so the ARN is the only unambiguous identifier.

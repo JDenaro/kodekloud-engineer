@@ -62,7 +62,7 @@ Success — the group exists with the required name:
 ## Best Practices
 
 - **Groups can't be nested.** A group cannot contain another group — only users. Design flat permission tiers instead of hierarchies.
-- **A group has no permissions until you attach a policy.** Creating the group is step one; use `attach-group-policy` to grant it access, then `add-user-to-group` to add members like [`iamuser_ravi`](day-16.md).
+- **A group has no permissions until you attach a policy.** Creating the group is step one; use `attach-group-policy` to grant it access, then `add-user-to-group` to add members like [`iamuser_ravi`](day-16-create-iam-user.md).
 - **Prefer groups over per-user policies.** Attaching policies to a group (rather than each user individually) keeps permissions consistent and easy to audit as team membership changes.
 - **Name groups by role/function, not by a single person.** `iamgroup_james` works for this lab, but in practice a group usually represents a role (e.g. `developers`, `billing-admins`) shared by many users.
 

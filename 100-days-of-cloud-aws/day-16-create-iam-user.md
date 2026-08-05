@@ -61,7 +61,7 @@ Success — the user exists with the required name:
 
 ## Best Practices
 
-- **Prefer IAM roles over long-lived users for workloads.** Users with static access keys are best reserved for humans or systems that truly need persistent credentials; EC2/Lambda workloads should assume roles instead (see [Day 08](day-08.md) for another EC2 instance-configuration example).
+- **Prefer IAM roles over long-lived users for workloads.** Users with static access keys are best reserved for humans or systems that truly need persistent credentials; EC2/Lambda workloads should assume roles instead.
 - **A bare user has no permissions.** `create-user` alone grants nothing — attach managed policies or add the user to a group before it can do anything.
 - **Enforce MFA and strong password policies for console users.** Not part of this task, but essential before granting console login.
 - **Use a consistent naming convention.** `iamuser_<name>` here makes users easy to distinguish from roles/groups when auditing IAM.
