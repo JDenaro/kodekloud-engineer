@@ -1,50 +1,53 @@
 # KodeKloud Engineer
 
-Beginner-friendly, step-by-step solutions and learning notes for KodeKloud Engineer challenges across Linux, Git, Docker, Kubernetes, Terraform, Ansible, and AWS.
+> Hands-on DevOps, one lab at a time.
 
-This repository documents practical lab work, the reasoning behind each solution, and the commands used to complete infrastructure and DevOps challenges. It is intended to support community learning and provide a transparent record of hands-on practice.
+Beginner-friendly walkthroughs for KodeKloud Engineer challenges. Each guide pairs copyable commands with the reasoning behind them, so you can learn **why** a solution works, not just what to type.
 
-## Purpose
+[Get started](#start-here) · [Explore learning paths](#choose-a-learning-path) · [See a sample guide](#what-youll-find-in-a-guide)
 
-The project focuses on learning by doing:
+## Start here
 
-- Complete challenges in a controlled lab environment.
-- Explain what each command does and why it is needed.
-- Record troubleshooting paths, expected results, and useful operational context.
-- Link to official documentation so each topic can be explored further.
+New to DevOps? Follow this suggested route, or jump straight to the topic you are practicing:
 
-## Repository Structure
+[Linux fundamentals](linux-lvl-1/) → [Docker](docker-lvl-1/) → [Kubernetes](kubernetes-lvl-1/) → [AWS](100-days-of-cloud-aws/) → [Terraform](terraform-lvl-1/)
 
-| Track | Directory | Focus |
-| --- | --- | --- |
-| 100 Days of Cloud AWS | [`100-days-of-cloud-aws/`](100-days-of-cloud-aws/) | AWS infrastructure challenges using the AWS CLI. |
-| 100 Days of DevOps | [`100-days-of-devops/`](100-days-of-devops/) | Guided Linux, services, networking, databases, Git, and DevOps administration challenges. |
-| 100 Days of MLOps | [`100-days-of-mlops/`](100-days-of-mlops/) | Reserved for future MLOps challenges. |
-| Docker Level 1 | [`docker-lvl-1/`](docker-lvl-1/) | Container creation, troubleshooting, images, volumes, and Docker operations. |
-| Git Level 1 | [`git-lvl-1/`](git-lvl-1/) | Git repositories, branches, remotes, and collaboration workflows. |
-| Kubernetes Level 1 | [`kubernetes-lvl-1/`](kubernetes-lvl-1/) | Pods, Deployments, Services, Jobs, CronJobs, and Kubernetes troubleshooting. |
-| Linux Level 1 | [`linux-lvl-1/`](linux-lvl-1/) | Users, permissions, services, networking, security, and system administration. |
-| Terraform Level 1 | [`terraform-lvl-1/`](terraform-lvl-1/) | Infrastructure provisioning with Terraform and AWS. |
+1. Open a track below and choose a challenge.
+2. Follow its steps inside the corresponding KodeKloud lab.
+3. Read each **Why** explanation and use the verification step to check your result.
 
-## Guide Structure
+**First lab to try:** [Custom Apache User Setup](linux-lvl-1/task-01-custom-apache-user-setup.md).
 
-Each completed challenge follows the same learning-oriented format:
+## Choose a learning path
 
-1. Challenge description and specific requirements.
-2. Step-by-step solution.
-3. A short explanation of what each command does and why it is used.
-4. Verification and expected results.
-5. Best practices and official documentation.
+### 01 · Foundations
 
-Files use `day-NN-<challenge-title>.md` for day-based programs and `task-NN-<challenge-title>.md` for numbered task tracks. The title portion is a lowercase hyphen-separated slug derived from the guide's H1 title.
+- **[Linux Level 1](linux-lvl-1/):** Users, permissions, services, networking, and system administration.
+- **[100 Days of DevOps](100-days-of-devops/):** A day-by-day journey through Linux, Git, Docker, Kubernetes, and troubleshooting. For a Git example, start with [Git Merge Branches](100-days-of-devops/day-25-git-merge-branches.md).
 
-## How to Use This Repository
+### 02 · Containers and orchestration
 
-1. Choose a learning track from the table above.
-2. Open the guide for the challenge you want to study.
-3. Follow the commands in order inside the corresponding KodeKloud lab.
-4. Read the explanations before adapting a command to another environment.
-5. Use the official documentation links to deepen your understanding.
+- **[Docker Level 1](docker-lvl-1/):** Images, containers, volumes, and everyday Docker operations.
+- **[Kubernetes Level 1](kubernetes-lvl-1/):** Pods, Deployments, Services, and other cluster resources.
+- **[100 Days of DevOps: container and Kubernetes labs](100-days-of-devops/):** Applied scenarios such as [deploying an Nginx web server](100-days-of-devops/day-56-deploy-nginx-web-server-on-kubernetes-cluster.md).
+
+### 03 · Cloud and infrastructure as code
+
+- **[100 Days of Cloud AWS](100-days-of-cloud-aws/):** AWS infrastructure challenges using the AWS CLI.
+- **[Terraform Level 1](terraform-lvl-1/):** Provision AWS resources through Terraform configuration.
+
+## What you'll find in a guide
+
+Every completed challenge follows a learning-oriented format: the original task and requirements, a step-by-step solution, a **Why** note for each step, a final verification, and links to official documentation. Take a look at [Deploy Guest Book App on Kubernetes](100-days-of-devops/day-67-deploy-guest-book-app-on-kubernetes.md) for an example.
+
+Files use `day-NN-<challenge-title>.md` for day-based programs and `task-NN-<challenge-title>.md` for numbered task tracks. The title portion is a lowercase, hyphen-separated slug derived from the guide's H1 title.
+
+## Learning principles
+
+- Practice in a controlled lab environment, then verify the result.
+- Prefer simple, copyable commands and explain what each one does.
+- Show the diagnostic path when a lab involves troubleshooting.
+- Link to official documentation for deeper study.
 
 Lab hostnames, credentials, IP addresses, and other environment details may change between lab sessions. Treat them as temporary values and never reuse lab credentials outside the lab environment.
 
