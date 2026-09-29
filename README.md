@@ -6,6 +6,19 @@ Beginner-friendly walkthroughs for KodeKloud Engineer challenges. Each guide pai
 
 [Get started](#start-here) · [Explore learning paths](#choose-a-learning-path) · [See a sample guide](#what-youll-find-in-a-guide)
 
+**Technologies you'll practice**
+
+<p>
+  <a href="linux-lvl-1/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="" width="28"> Linux</a>&nbsp;&nbsp;
+  <a href="100-days-of-devops/day-25-git-merge-branches.md"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="28"> Git</a>&nbsp;&nbsp;
+  <a href="100-days-of-devops/day-08-install-ansible.md"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" alt="" width="28"> Ansible</a>&nbsp;&nbsp;
+  <a href="docker-lvl-1/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="" width="28"> Docker</a>&nbsp;&nbsp;
+  <a href="kubernetes-lvl-1/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" alt="" width="28"> Kubernetes</a>&nbsp;&nbsp;
+  <a href="100-days-of-devops/day-68-set-up-jenkins-server.md"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" alt="" width="28"> Jenkins</a>&nbsp;&nbsp;
+  <a href="100-days-of-cloud-aws/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="" width="32"> AWS</a>&nbsp;&nbsp;
+  <a href="terraform-lvl-1/"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" alt="" width="28"> Terraform</a>
+</p>
+
 ## Start here
 
 New to DevOps? Follow this suggested route, or jump straight to the topic you are practicing:
@@ -62,6 +75,8 @@ Lab hostnames, credentials, IP addresses, and other environment details may chan
 ## License and Attribution
 
 Original explanations, learning notes, command guidance, and other authored documentation in this repository are intended to be shared under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+Technology icons are served by [Devicon](https://github.com/devicons/devicon).
 
 This is an independent community learning project and is not affiliated with, sponsored by, or endorsed by KodeKloud. KodeKloud names, challenge descriptions, lab content, logos, and other third-party materials remain subject to their respective rights and terms. They are referenced for educational context and are not relicensed by this repository. See the [KodeKloud Terms of Service](https://kodekloud.com/terms-of-service/) for the applicable terms.
 
