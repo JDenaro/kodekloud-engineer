@@ -24,6 +24,8 @@ Some new requirements have come up to install and configure some packages on the
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 The important distinction is **where the command runs**. A normal Jenkins shell build step runs on the Jenkins server; it does not install a package on the Storage server. The successful job used the **Publish Over SSH** plugin to execute the installation on `ststor01` as `natasha`.
 
 ### 🔐 Step 1: Sign In and Install Publish Over SSH

@@ -20,6 +20,8 @@ Click on the `Jenkins` button on the top bar to access the Jenkins UI. Login usi
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 Jenkins has two relevant permission scopes here. The **global authorization matrix** lets `sam` and `rohan` sign in with **Overall → Read**. The **project matrix** grants the requested permissions only on the existing `Packages` job. The Matrix Authorization Strategy plugin was missing in this lab, so it had to be installed before the project-based strategy appeared.
 
 ### 🔌 Step 1: Install the Authorization Plugin

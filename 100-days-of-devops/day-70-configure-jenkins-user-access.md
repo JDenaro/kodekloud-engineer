@@ -25,6 +25,8 @@ The Nautilus team is integrating Jenkins into their CI/CD pipelines. After setti
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 Jenkins separates **authentication** (who the user is) from **authorization** (what the user may do). The successful setup gave `rose` global **Overall/Read** access, then gave her **Job/Read** only on the existing `Helloworld` job. These are two different matrices. In this lab, the Matrix Authorization Strategy plugin also had to be installed and Jenkins restarted before the strategy could be selected.
 
 ### 🔐 Step 1: Sign In and Install the Authorization Plugin

@@ -30,6 +30,8 @@ LB server is already configured. You should be able to see the latest changes yo
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 The Jenkins controller schedules the deployment on an SSH agent running as `sarah` on `stapp01`. The agent has its own workspace under `/home/sarah/jenkins_agent`, while the website remains in `/var/www/html`, Apache's document root. Updating the existing clone publishes the static files at the main application URL.
 
 Three details mattered in this run: Java 11 needed upgrading to Java 17, the Pipeline plugin was missing, and a Jenkins `dir` block caused a temporary-directory permission error. The successful pipeline uses `cd` inside `sh` to update the repository while keeping Jenkins' temporary files in the agent workspace.

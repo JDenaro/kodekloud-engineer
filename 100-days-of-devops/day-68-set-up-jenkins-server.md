@@ -21,6 +21,8 @@ The DevOps team at xFusionCorp Industries is initiating the setup of CI/CD pipel
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 Install Java before Jenkins, then start Jenkins with `service` as the lab requires. The Jenkins web page returned `HTTP ERROR 431 Request Header Fields Too Large` in the regular browser session during this lab. Opening the lab's Jenkins URL in an Incognito tab allowed the setup wizard to continue. The exact oversized header was not identified, so there was no reason to change the Jenkins server configuration.
 
 ### 🔐 Step 1: Connect to the Jenkins Server

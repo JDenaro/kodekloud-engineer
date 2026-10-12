@@ -18,6 +18,8 @@ The Nautilus DevOps team has recently setup a Jenkins server, which they want to
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 The Git plugin initially reported that it could not load its **Credentials Binding** dependency. Installing Credentials Binding also showed an error during dynamic loading. After Jenkins was restarted, the required plugins appeared as installed. This outcome is consistent with plugin downloads completing while their activation still required a restart; the error alone did not establish a deeper dependency or version problem.
 
 ### 🕶️ Step 1: Open Jenkins in an Incognito Window

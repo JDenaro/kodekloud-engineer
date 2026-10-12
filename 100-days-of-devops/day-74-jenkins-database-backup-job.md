@@ -28,6 +28,8 @@ Click on the `Jenkins` button on the top bar to access the Jenkins UI. Login usi
 
 ## Solution
 
+> **Java prerequisite for new agents:** In the captured App Server labs, the initial runtime was Java 11 (`11.0.20.1`). Installing Java 17 was necessary to connect a new Jenkins agent with the lab's remoting version. Before launching a new node, install `java-17-openjdk` on its App Server and confirm `java -version` selects Java 17. This is an agent prerequisite, not an instruction to change the Jenkins controller's runtime or reinstall Java for UI-only tasks. Check each target server; the captured Java 11 evidence is from `stapp01`, not a version measurement for every server. Other Jenkins versions may require newer Java.
+
 The backup crosses two connections: **Jenkins → `stapp01`** to start a script, then **`stapp01` → `ststor01`** to deliver the SQL file. Jenkins uses Publish Over SSH for the first connection; a dedicated SSH key allows the second connection to run without a password prompt.
 
 ### 🔎 Step 1: Check Database Access on App Server 1
