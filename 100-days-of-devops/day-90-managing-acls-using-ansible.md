@@ -101,6 +101,8 @@ Run the required validation command from `/home/thor/ansible`:
 ansible-playbook -i inventory playbook.yml
 ```
 
+> **Why:** `ansible-playbook` runs the automation, and `-i inventory` selects the hosts and connection settings supplied by the lab. Using this exact command confirms the playbook does not depend on extra arguments. The recap's `failed=0` and `unreachable=0` for every app server shows that Ansible completed the tasks on all three targets.
+
 The playbook completed successfully on all three application servers. The observed recap was:
 
 ```text
