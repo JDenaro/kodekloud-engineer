@@ -18,6 +18,8 @@ The Nautilus DevOps team has an existing `httpd` role that installs and starts A
 cd /home/thor/ansible
 ```
 
+> **Why:** The inventory is in this directory, and the lab's validation command refers to it with the relative name `inventory`. Working here also places the playbook and role edits under the required Ansible directory.
+
 ### 📝 Step 2: Target App Server 1 in the playbook
 
 Edit `playbook.yml`:
@@ -31,7 +33,7 @@ Edit `playbook.yml`:
     - role/httpd
 ```
 
-`hosts: stapp01` limits the play to App Server 1.
+> **Why:** `hosts: stapp01` limits the role to App Server 1, the only target in this task. `become: yes` and `become_user: root` allow the role to install and configure a system service with administrative privileges.
 
 ### 🧩 Step 3: Create the Jinja2 template
 
@@ -41,7 +43,7 @@ Create `role/httpd/templates/index.html.j2` with this line:
 This file was created using Ansible on {{ inventory_hostname }}
 ```
 
-Ansible renders `inventory_hostname` as the current inventory name, so the template does not hard-code `stapp01`.
+> **Why:** Ansible renders `inventory_hostname` as the current inventory name when it processes the template. This produces the required server-specific line without hard-coding `stapp01` in the template.
 
 ### ⚙️ Step 4: Add the template task to the role
 
@@ -57,13 +59,15 @@ Keep the existing `yum` and `service` tasks in `role/httpd/tasks/main.yml`, then
     mode: '0644'
 ```
 
-The `template` module finds `src` in the role's `templates/` directory. The inventory's `ansible_user` is the SSH connection user (`tony` for `stapp01`); privilege escalation to root does not require hard-coding that owner in the task.
+> **Why:** The role's `templates` directory is where Ansible looks for `src`. The `template` module renders the Jinja2 variable and writes the result to `dest`. The inventory's `ansible_user` is the SSH connection user (`tony` for `stapp01`), so using it for `owner` and `group` applies the required ownership without hard-coding it. The quoted mode `'0644'` sets the requested permissions.
 
 ### ✅ Step 5: Run the required playbook command
 
 ```bash
 ansible-playbook -i inventory playbook.yml
 ```
+
+> **Why:** `ansible-playbook` executes the play, and `-i inventory` selects the provided hosts and connection settings. Running this exact command confirms the role works without additional arguments, as required by validation.
 
 The observed run completed on `stapp01`: all four tasks succeeded, with `failed=0` and `unreachable=0`. The user confirmed that KodeKloud marked the lab successful.
 
