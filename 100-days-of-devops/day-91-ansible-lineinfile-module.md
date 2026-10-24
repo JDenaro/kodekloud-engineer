@@ -22,6 +22,8 @@ The inventory lists `stapp01`, `stapp02`, and `stapp03` under `all`, so one play
    vi playbook.yml
    ```
 
+   > **Why:** `cd` moves to the directory containing the provided inventory, so the required validation command can refer to it by the relative name `inventory`. `vi` opens the playbook at the path required by the lab.
+
 2. Add the following YAML and save the file:
 
    ```yaml
@@ -56,13 +58,15 @@ The inventory lists `stapp01`, `stapp02`, and `stapp03` under `all`, so one play
            insertbefore: BOF
    ```
 
-   **Why:** `hosts: all` targets every server in this inventory. `package` installs `httpd`, `service` starts it, and `copy` creates the page with its owner, group, and mode. `lineinfile` with `insertbefore: BOF` places the welcome line at the beginning.
+   > **Why:** `hosts: all` targets every server in this inventory. `package` installs `httpd`, and `service` starts it. `copy` creates the page with its required owner, group, and mode. `lineinfile` manages the requested line, while `insertbefore: BOF` places it before the file's existing content.
 
 3. Run the command required by the lab:
 
    ```bash
    ansible-playbook -i inventory playbook.yml
    ```
+
+   > **Why:** `ansible-playbook` executes the tasks, and `-i inventory` tells Ansible which hosts and connection details to use. This is the validator's exact command, so it confirms the playbook runs without extra arguments. The reported `failed=0` on each host indicates that Ansible completed the play there.
 
    The observed recap reported `failed=0` for `stapp01`, `stapp02`, and `stapp03`.
 
